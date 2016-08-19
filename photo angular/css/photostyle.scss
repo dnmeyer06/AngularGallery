@@ -1,0 +1,398 @@
+
+
+body
+{
+    font-family: raleway;
+
+    margin: 0;
+
+    background: white;
+}
+
+#bHeight
+{
+    max-height: 100vh;
+}
+
+#landing
+{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+
+    background-image: url('../images/background4.jpg');
+    background-position: center;
+    background-size: cover;
+    button
+    {
+        border: none;
+        background: transparent;
+        &:hover
+        {
+            cursor: pointer;
+        }
+        .fa
+        {
+            font-size: 15em;
+
+            position: absolute;
+            z-index: 2000;
+            right: 20px;
+            bottom: 20px;
+
+            color: #e4e4e4;
+            &:hover
+            {
+                color: #b7b7b7;
+            }
+        }
+    }
+    .landCont
+    {
+        position: absolute;
+        top: 50%;
+
+        width: 100%;
+        margin-top: -300px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+
+        text-align: center;
+        h1
+        {
+            font-size: 60px;
+            font-weight: 500;
+            line-height: 1.3;
+
+            margin: 0;
+            padding: 0 140px 0 140px;
+
+            text-align: center;
+            letter-spacing: 4;
+
+            color: #064767;
+
+            -webkit-filter: none;
+        }
+    }
+    .title
+    {
+        position: absolute;
+        bottom: 1.5em;
+        left: 3em;
+
+        width: 70%;
+        h2,
+        h3
+        {
+            font-weight: 300;
+
+            margin: 20px;
+
+            letter-spacing: 2px;
+
+            color: white;
+        }
+        h2
+        {
+            font-size: 72px;
+        }
+    }
+}
+
+.gallery
+{
+    z-index: 0;
+
+    display: none;
+    clear: both;
+
+    width: 100%;
+    margin-top: 20vh;
+
+    background-color: #ec8b60;
+    .hidden
+    {
+        opacity: 0;
+    }
+    .visible
+    {
+        opacity: 1;
+    }
+    .grid
+    {
+        overflow: auto;
+
+        width: 100%;
+
+        background: white;
+        .grid-box
+        {
+            position: relative;
+
+            float: left;
+
+            width: 33.3333333%;
+            height: auto;
+            margin-bottom: -4px;
+            .box-caption
+            {
+                font-weight: 400;
+
+                position: absolute;
+                top: 50%;
+                right: 0;
+                left: 0;
+
+                display: block;
+                visibility: hidden;
+
+                margin-top: -47px;
+
+                text-align: center;
+
+                color: #333;
+                p
+                {
+                    font-size: 40px;
+
+                    margin: auto;
+
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+            }
+            a
+            {
+                display: block;
+
+                transition-duration: .75s;
+                img
+                {
+                    width: 100%;
+                    height: auto;
+                }
+                &:hover
+                {
+                    opacity: .1;
+                }
+            }
+            &:hover
+            {
+                .box-caption,
+                .box-content
+                {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+.slideShow
+{
+    z-index: 100;
+
+    display: none;
+
+    width: 100%;
+    height: auto;
+    img
+    {
+        width: 100%;
+    }
+    button
+    {
+        z-index: 1000;
+
+        border: none;
+        background: transparent;
+        &:hover
+        {
+            cursor: pointer;
+        }
+        i
+        {
+            font-size: 15em;
+
+            position: fixed;
+            z-index: 1000;
+            right: 20px;
+            bottom: 20px;
+
+            color: #333;
+            &:hover
+            {
+                color: #b7b7b7;
+            }
+        }
+    }
+    .grid
+    {
+        overflow: auto;
+
+        width: 100%;
+
+        background: white;
+        .grid-box
+        {
+            position: relative;
+
+            float: left;
+
+            width: 33.3333333%;
+            height: auto;
+            margin-bottom: -4px;
+            .box-caption
+            {
+                font-weight: 400;
+
+                position: absolute;
+                top: 50%;
+                right: 0;
+                left: 0;
+
+                display: block;
+                visibility: hidden;
+
+                margin-top: -47px;
+
+                text-align: center;
+
+                color: #333;
+                p
+                {
+                    font-size: 40px;
+
+                    margin: auto;
+
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+            }
+            a
+            {
+                display: block;
+
+                transition-duration: .75s;
+                img
+                {
+                    width: 100%;
+                    height: auto;
+                }
+                &:hover
+                {
+                    opacity: .1;
+                }
+            }
+            &:hover
+            {
+                .box-caption,
+                .box-content
+                {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px)
+{
+    .gallery
+    {
+        .grid
+        {
+            .grid-box
+            {
+                width: 50%;
+            }
+        }
+    }
+    .slideShow
+    {
+        .grid
+        {
+            .grid-box
+            {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 680px)
+{
+    #landing
+    {
+        button
+        {
+            .fa
+            {
+                font-size: 7em;
+            }
+        }
+        .landCont
+        {
+            padding: 30% 0 0 0;
+            h1
+            {
+                font-size: 25px;
+
+                padding: 5% 5% 5% 5%;
+            }
+        }
+        .title
+        {
+            bottom: 0;
+            left: 0;
+
+            width: 65%;
+            padding: 0 0 5% 2%;
+            h2
+            {
+                font-size: 25px;
+
+                margin: 0;
+                padding-bottom: 5%;
+            }
+            .cap
+            {
+                font-size: 15px;
+
+                margin: 0;
+            }
+        }
+    }
+    .gallery
+    {
+        .grid
+        {
+            .grid-box
+            {
+                width: 100%;
+            }
+        }
+    }
+    .slideShow
+    {
+        button
+        {
+            i 
+            {
+                font-size: 7em;
+            }
+        }
+        .grid
+        {
+            .grid-box
+            {
+                width: 100%;
+            }
+        }
+    }
+}
