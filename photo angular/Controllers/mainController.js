@@ -13,71 +13,82 @@ myApp.controller('MainController', ['$scope', function($scope) {
 		"line2": 'been traveling ever since.'
 	};
 
-	$( ".grid-box" ).click(function() {
+	$scope.marquee = function(location) {
 		$( "#landing").css("display", "none");
 		$( ".gallery").css("display", "none");
 		$( ".slideShow").css("display", "block");
 
-		var location = $(this).data('place');
 		var photosArray = photos[location];
 		for (i = 0; i < photosArray.length; i++) {
-			$( "#indGrid" ).append( "<div class='grid-box resizableImage' id='ind'><img src=" + photosArray[i] + "></div>")
-		}
-	});
+		$( "#indGrid" ).append( "<div class='grid-box resizableImage' id='ind'><img src=" + photosArray[i] + "></div>")
+	}
+	};
 
 
 	$scope.locations = [
 	{
 		name: 'Seattle',
-		pic: 'img/seattle.jpg'
+		pic: 'img/seattle.jpg',
+		place: 'seattle'
 	},
 	{
 		name: 'Medellin, Colombia',
-		pic: 'img/colombia.jpg'
+		pic: 'img/colombia.jpg',
+		place: 'colombia'
 	},
 	{
 		name: 'Paonia, CO',
-		pic: 'img/Paonia.jpg'
+		pic: 'img/Paonia.jpg',
+		place: 'paonia'
 	},
 	{
 		name: 'Huacachina, Peru',
-		pic: 'img/Huacachina.jpg'
+		pic: 'img/Huacachina.jpg',
+		place: 'huacachina'
 	},
 	{
 		name: 'Chile',
-		pic: 'img/chile.jpg'
+		pic: 'img/chile.jpg',
+		place: 'Chile'
 	},
 	{
 		name: 'Vida!',
-		pic: 'img/vida.jpg'
+		pic: 'img/vida.jpg',
+		place: 'vida'
 	},
 	{
 		name: 'Marthas Vineyard',
-		pic: 'img/mv.jpg'
+		pic: 'img/mv.jpg',
+		place: 'mv'
 	},
 	{
 		name: 'Bryce Canyon',
-		pic: 'img/bryce.jpg'
+		pic: 'img/bryce.jpg',
+		place: 'bryce'
 	},
 	{
 		name: 'Torres del Paine, Chile',
-		pic: 'img/tdp.jpg'
+		pic: 'img/tdp.jpg',
+		place: 'chile'
 	},
 	{
 		name: 'Cambridge, MA',
-		pic: 'img/cambridge.jpg'
+		pic: 'img/cambridge.jpg',
+		place: 'cambridge'
 	},
 	{
 		name: 'San Francisco',
-		pic: 'img/sanfran.jpg'
+		pic: 'img/sanfran.jpg',
+		place: 'sf'
 	},
 	{
 		name: 'Commercial Work',
-		pic: 'img/portfolio.jpg'
+		pic: 'img/portfolio.jpg',
+		place: 'commercial'
 	}
 	];
 
-	var photos = {
+var photos = {
 		seattle: [
 		"https://lh3.googleusercontent.com/-id1BVs9ncQw/VxWunrSBhlI/AAAAAAAANOQ/Sn_bg2yNlk4gf18YoIBIaPp3DHAyUmCFACCo/s800/DSCF1564.JPG",
 		"https://lh3.googleusercontent.com/-OZs7f53WtfQ/VxWunrUDBGI/AAAAAAAANOQ/KVc-mcDICmUBAOcZtmjIYQQPyjyiKiF8wCCo/s800/DSCF1577.JPG", 

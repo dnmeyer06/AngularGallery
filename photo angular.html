@@ -24,14 +24,14 @@
 		<div class="gallery">
 			<div class="grid">
 				<div ng-repeat="location in locations">
-					<div class="grid-box" data-place="seattle">
+					<div class="grid-box" ng-click="marquee(location.place)">
 						<div class="box-caption">
 							<p>{{ location.name }}</p>
 						</div>
 						<a href="#">
 							<img ng-src="{{ location.pic }}">
-						</a>
 					</div>
+				</a>
 				</div>
 			</div>
 		</div>
